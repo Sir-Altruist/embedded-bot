@@ -1,3 +1,11 @@
+import type { Metadata } from "next";
+import "./global.css";
+
+export const metadata: Metadata = {
+  title: "Your App",
+  description: "Your description",
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -5,7 +13,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body suppressHydrationWarning={true}>
+        {children}
+      </body>
     </html>
   );
 }
