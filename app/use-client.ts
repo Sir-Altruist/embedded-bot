@@ -15,7 +15,7 @@ export function useChatClient(
   const [isTyping, setIsTyping] = useState(false);
 
   useEffect(() => {
-    if (!this.apiKey || !this.sessionId || !this.userId) return;
+    if (!apiKey || !sessionId || !userId) return;
     const chatClient = new ChatClient(
       // process.env.NEXT_PUBLIC_SONA_API_BASE_URL ?? "http://localhost:4000",
       "http://localhost:4000",
