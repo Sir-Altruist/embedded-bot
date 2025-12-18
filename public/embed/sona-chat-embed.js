@@ -129,7 +129,7 @@
 
     const iframe = document.createElement('iframe');
     iframe.src = 'https://sona-bot.netlify.app/embed/chat';
-    // iframe.src = 'https://common-eels-write.loca.lt/embed/chat';
+    // iframe.src = 'https://tricky-groups-run.loca.lt/embed/chat';
     iframe.title = 'Sona AI Chat';
 
     iframe.style.cssText = `
