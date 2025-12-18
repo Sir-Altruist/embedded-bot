@@ -17,13 +17,17 @@ export default function ChatBox() {
     const [sessionId, setSessionId] = useState<string>('');
     const [isInitialized, setIsInitialized] = useState(false);
     const [isReturningUser, setIsReturningUser] = useState(false);
-    const params = new URLSearchParams(window.location.search);
-    const apiKey = params.get("apiKey");
+    const [apiKey, setApiKey] = useState("")
+
 
     // Initialize IDs safely on client side only
     useEffect(() => {
       // Generate or retrieve leadId from localStorage
       let storedLeadId = null;
+      if(window !== undefined){
+        const params = new URLSearchParams(window.location.search);
+        setApiKey(params.get("apiKey"))
+      }
       try {
           storedLeadId = localStorage.getItem('chatLeadId');
       } catch (error) {

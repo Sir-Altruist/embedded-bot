@@ -260,7 +260,7 @@
 
   // Create iframe - this contains your full chat UI with the button
   const iframe = document.createElement("iframe");
-  iframe.src = `https://sona-bot.netlify.app/embed/chat?apiKey=${encodeURIComponent(apiKey)}`;
+  iframe.src = `https://fruity-geckos-throw.loca.lt/embed/chat?apiKey=${encodeURIComponent(apiKey)}`;
   iframe.title = "Sona AI Chat";
   iframe.style.cssText = `
     width: 100%;
