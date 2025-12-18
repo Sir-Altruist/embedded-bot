@@ -177,44 +177,44 @@
   container.style.fontFamily = "sans-serif";
 
   // Create chat toggle button
-  // const button = document.createElement("button");
-  // button.innerText = "💬";
-  // button.style.width = "64px";
-  // button.style.height = "64px";
-  // button.style.borderRadius = "50%";
-  // button.style.border = "none";
-  // button.style.cursor = "pointer";
-  // button.style.background = "#5F3DF4";
-  // button.style.color = "#fff";
-  // button.style.fontSize = "28px";
-  // button.style.boxShadow = "0 4px 12px rgba(95,61,244,0.3)";
-  // button.style.transition = "all 0.3s ease";
+  const button = document.createElement("button");
+  button.innerText = "💬";
+  button.style.width = "64px";
+  button.style.height = "64px";
+  button.style.borderRadius = "50%";
+  button.style.border = "none";
+  button.style.cursor = "pointer";
+  button.style.background = "#5F3DF4";
+  button.style.color = "#fff";
+  button.style.fontSize = "28px";
+  button.style.boxShadow = "0 4px 12px rgba(95,61,244,0.3)";
+  button.style.transition = "all 0.3s ease";
 
   // Hover effect
-  // button.onmouseover = () => {
-  //   button.style.transform = "scale(1.1)";
-  //   button.style.boxShadow = "0 6px 16px rgba(95,61,244,0.4)";
-  // };
-  // button.onmouseout = () => {
-  //   button.style.transform = "scale(1)";
-  //   button.style.boxShadow = "0 4px 12px rgba(95,61,244,0.3)";
-  // };
+  button.onmouseover = () => {
+    button.style.transform = "scale(1.1)";
+    button.style.boxShadow = "0 6px 16px rgba(95,61,244,0.4)";
+  };
+  button.onmouseout = () => {
+    button.style.transform = "scale(1)";
+    button.style.boxShadow = "0 4px 12px rgba(95,61,244,0.3)";
+  };
 
   // Create iframe
   const iframe = document.createElement("iframe");
   iframe.src = "https://sona-bot.netlify.app/embed/chat"; // your Next.js chat page
   iframe.style.width = "400px";
   iframe.style.height = "520px";
-  // iframe.style.border = "none";
-  // iframe.style.borderRadius = "12px";
-  iframe.style.display = "block"; // initially hidden
-  // iframe.style.boxShadow = "0 4px 24px rgba(0,0,0,0.15)";
-  // iframe.style.background = "transparent";
+  iframe.style.border = "none";
+  iframe.style.borderRadius = "12px";
+  iframe.style.display = "none"; // initially hidden
+  iframe.style.boxShadow = "0 4px 24px rgba(0,0,0,0.15)";
+  iframe.style.background = "transparent";
 
   // Toggle iframe on button click
-  // button.onclick = () => {
-  //   iframe.style.display = iframe.style.display === "none" ? "block" : "none";
-  // };
+  button.onclick = () => {
+    iframe.style.display = iframe.style.display === "none" ? "block" : "none";
+  };
 
   // Append elements
   container.appendChild(button);
