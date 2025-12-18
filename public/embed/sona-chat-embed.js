@@ -207,9 +207,9 @@
   iframe.style.height = "520px";
   // iframe.style.border = "none";
   // iframe.style.borderRadius = "12px";
-  // iframe.style.display = "none"; // initially hidden
+  iframe.style.display = "block"; // initially hidden
   // iframe.style.boxShadow = "0 4px 24px rgba(0,0,0,0.15)";
-  iframe.style.background = "transparent";
+  // iframe.style.background = "transparent";
 
   // Toggle iframe on button click
   // button.onclick = () => {
