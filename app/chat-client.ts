@@ -20,6 +20,7 @@ export class ChatClient {
     private userId: string,
     private userType: 'lead' | 'agent',
     private sessionId: string,
+    private apiKey: string
   ) {}
 
   connect(): Promise<void> {
@@ -29,6 +30,7 @@ export class ChatClient {
           userId: this.userId,
           userType: this.userType,
           sessionId: this.sessionId,
+          apiKey: this.apiKey
         },
         transports: ['websocket'],
         reconnection: true,

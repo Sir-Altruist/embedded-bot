@@ -6,7 +6,8 @@ import { ChatClient, ChatMessage } from "./chat-client";
 export function useChatClient(
   userId: string,
   userType: "lead" | "agent",
-  sessionId: string
+  sessionId: string,
+  apiKey: string
 ) {
   const [client, setClient] = useState<ChatClient | null>(null);
   const [messages, setMessages] = useState<ChatMessage[]>([]);
@@ -19,7 +20,8 @@ export function useChatClient(
       "http://localhost:4000",
       userId,
       userType,
-      sessionId
+      sessionId,
+      apiKey
     );
 
     chatClient

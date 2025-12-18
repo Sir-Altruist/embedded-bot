@@ -17,6 +17,8 @@ export default function ChatBox() {
     const [sessionId, setSessionId] = useState<string>('');
     const [isInitialized, setIsInitialized] = useState(false);
     const [isReturningUser, setIsReturningUser] = useState(false);
+    const params = new URLSearchParams(window.location.search);
+    const apiKey = params.get("apiKey");
 
     // Initialize IDs safely on client side only
     useEffect(() => {
@@ -52,7 +54,8 @@ export default function ChatBox() {
     const { messages, setMessages, sendMessage, requestGreeting, setIsTyping, isConnected, isTyping } = useChatClient(
         leadId,
         "lead",
-        sessionId
+        sessionId,
+        apiKey
     );
 
 
@@ -69,7 +72,8 @@ export default function ChatBox() {
             setMessages((prev) => [...prev, userMessage]);
             
             // Send to server
-            sendMessage(leadId, process.env.NEXT_PUBLIC_SONA_AGENT_ID as string, chat);
+            // sendMessage(leadId, process.env.NEXT_PUBLIC_SONA_AGENT_ID as string, chat);
+            sendMessage(leadId, apiKey as string, chat);
             setChat("")
         },
 
@@ -125,7 +129,8 @@ export default function ChatBox() {
 
             if(isConnected){
                 setTimeout(() => requestGreeting(
-                    process.env.NEXT_PUBLIC_SONA_AGENT_ID as string,
+                    // process.env.NEXT_PUBLIC_SONA_AGENT_ID as string,
+                    apiKey as string,
                     leadId
                 ).then(() => {
                     setHasGreeted(true)
