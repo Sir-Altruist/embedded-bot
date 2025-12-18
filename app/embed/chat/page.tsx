@@ -313,7 +313,7 @@ export default function EmbedChat() {
       position: 'fixed',
       top: 0,
       left: 0,
-      pointerEvents: 'none',
+      // pointerEvents: 'none',
       overflow: 'hidden'
     }}>
       <div style={{
