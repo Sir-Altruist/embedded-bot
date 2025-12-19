@@ -8,6 +8,7 @@
   "dependencies": {
     "@tailwindcss/postcss": "^4.1.18",
     "clsx": "^2.1.1",
+    "dotenv": "^17.2.3",
     "framer-motion": "^12.23.26",
     "next": "latest",
     "postcss": "^8.5.6",

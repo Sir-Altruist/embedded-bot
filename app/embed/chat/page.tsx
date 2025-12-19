@@ -55,7 +55,7 @@ export default function ChatBox() {
       setIsInitialized(true);
     }, []);
 
-    console.log('apiKey: ', apiKey)
+
     const { messages, setMessages, sendMessage, requestGreeting, setIsTyping, isConnected, isTyping } = useChatClient(
         leadId,
         "lead",

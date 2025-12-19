@@ -39,12 +39,12 @@ export class ChatClient {
       });
 
       this.socket.on('connection:success', (data) => {
-        console.log('Connected to chat server:', data);
+        // console.log('Connected to chat server:', data);
         resolve();
       });
 
       this.socket.on('message:received', (message: ChatMessage) => {
-        console.log('response: ', message)
+        // console.log('response: ', message)
         this.messageCallbacks.forEach((cb) => cb(message));
       });
 
