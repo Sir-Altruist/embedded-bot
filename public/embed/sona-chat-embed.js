@@ -36,7 +36,8 @@
 
   // Create iframe - this contains your full chat UI with the button
   const iframe = document.createElement("iframe");
-  iframe.src = `https://sona-bot.netlify.app/embed/chat?apiKey=${encodeURIComponent(apiKey)}`;
+  // iframe.src = `https://sona-bot.netlify.app/embed/chat?apiKey=${encodeURIComponent(apiKey)}`;
+  iframe.src = `https://sona-bot.netlify.app/embed/chat?apiKey=sk_live_r9vw8sx8x59`;
   iframe.title = "Sona AI Chat";
   iframe.style.cssText = `
     width: 100%;
